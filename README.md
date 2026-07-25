@@ -1,4 +1,5 @@
 # Develop a NetDevOps System
+![Laboratorio Cisco NetDevOps](Immagine%202026-07-25%20183042.png)
 
 Laboratorio didattico di network automation che realizza un ciclo NetDevOps
 completo:
