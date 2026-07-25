@@ -1,0 +1,30 @@
+testbed:
+  name: routers
+  credentials:
+    default:
+      username: cisco
+      password: cisco
+    enable:
+      password: cisco
+devices:
+  R1:
+    os: iosxe
+    type: csr1000v
+    connections:
+      vty:
+        protocol: telnet
+        ip: 172.21.1.21
+  R2:
+    os: iosxe
+    type: csr1000v
+    connections:
+      vty:
+        protocol: telnet
+        ip: 172.21.1.22
+  R3:
+    os: iosxe
+    type: csr1000v
+    connections:
+      vty:
+        protocol: telnet
+        ip: 172.21.1.23

@@ -1,0 +1,9 @@
+tailf-ncs:devices:
+  device:
+    - name: R1
+      config:
+        tailf-ned-cisco-ios:interface:
+          GigabitEthernet:
+            - name: "2"
+              shutdown:
+                - no

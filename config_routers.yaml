@@ -1,0 +1,32 @@
+- name: TOPOLOGY CONFIGURATION
+  hosts: server
+  gather_facts: no 
+  tasks:
+
+   - name: LOAD INSTANCE SERVICE FILE
+     include_vars:
+        file: vars/service_instance.yaml
+        name: serv
+
+   - name: LOAD R1 FILE
+     include_vars:
+        file: vars/R1.yaml
+        name: R1_intf
+
+   - name: CREATE NSO SERVICE INSTANCE
+     nso_config:
+        url: http://172.21.1.10:8083/jsonrpc
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        data:
+          "{{ serv }}"
+
+   - name: ADMIN R1 INTERFACE G2
+     nso_config:
+        url: http://172.21.1.10:8083/jsonrpc
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        data: 
+          "{{ R1_intf }}"
+
+    

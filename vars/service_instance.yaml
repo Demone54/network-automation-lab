@@ -1,0 +1,6 @@
+tailf-ncs:services:
+  intfs:intfs:
+    - name: srv6
+      device: R2
+      intf_number: 22
+      ip_add: 20.4.4.4

@@ -1,0 +1,5 @@
+---
+ansible_connection: "httpapi"
+ansible_httpapi_port: 8083
+ansible_user: "admin"
+ansible_password: "admin"
