@@ -1,0 +1,6 @@
+stages:
+  - conf
+
+topology_conf:
+  stage: conf
+  script: ansible-playbook config_routers.yaml
