@@ -1,5 +1,6 @@
 stages:
   - conf
+  - test
 
 topology_conf:
   stage: conf
