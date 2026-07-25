@@ -4,3 +4,9 @@ stages:
 topology_conf:
   stage: conf
   script: ansible-playbook config_routers.yaml
+
+test_connect:
+  stage: test
+  script:
+    - cd tests
+    - pyats run job pyats_job_runner.py --testbed testbed.yaml --targets ping_targets.yaml
