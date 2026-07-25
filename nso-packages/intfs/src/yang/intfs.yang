@@ -1,0 +1,39 @@
+module intfs {
+  namespace "http://com/example/intfs";
+  prefix intfs;
+
+  import ietf-inet-types {
+    prefix inet;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+augment /ncs:services {
+  list intfs {
+    key name;
+
+    uses ncs:service-data;
+    ncs:servicepoint "intfs";
+
+    leaf name {
+      type string;
+    }
+
+    leaf device {
+      type leafref {
+        path "/ncs:devices/ncs:device/ncs:name";
+      }
+    }
+
+    leaf intf_number {
+      type uint32;
+    }
+
+    leaf ip_add {
+      type inet:ipv4-address;
+    }
+
+    
+  }
+}
+}
