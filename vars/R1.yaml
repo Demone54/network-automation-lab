@@ -6,4 +6,4 @@ tailf-ncs:devices:
           GigabitEthernet:
             - name: "2"
               shutdown:
-                - no
+                - null

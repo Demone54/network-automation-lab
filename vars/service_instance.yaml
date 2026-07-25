@@ -1,6 +1,6 @@
 tailf-ncs:services:
   intfs:intfs:
-    - name: srv7
+    - name: srv9
       device: R3
-      intf_number: 32
-      ip_add: 30.4.4.4
+      intf_number: 33
+      ip_add: 30.5.5.5
